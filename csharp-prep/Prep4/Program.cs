@@ -28,7 +28,7 @@ class Program
             numbersTotal += number;
 
             // Check each number if it's greater than the current number in the 
-            // maxNumber variable, if it is assign it to the maxNumber variable.
+            // maxNumber variable. If it is, assign it to the maxNumber variable.
             if (number > maxNumber)
             {
                 maxNumber = number;
