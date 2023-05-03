@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class Journal
 {
-    public List<Entry> _entries = new List<Entry>();
+    private List<Entry> _entries = new List<Entry>();
     public void AddEntry(Entry entry)
     {
         // Add entry to the _entries list.
