@@ -8,21 +8,7 @@ class Program
         Console.WriteLine("Welcome to the Journal Program!");
 
         // Instantiate a PromptGenerator object and store it in promptGenerator.
-        PromptGenerator promptGenerator = new PromptGenerator();
-        // Initialize the available prompts for the promptGenerator.
-        promptGenerator.AddPrompts(
-            "Who was the most interesting person I interacted with today?",
-            "What was the best part of my day?",
-            "How did I see the hand of the Lord in my life today?",
-            "What was the strongest emotion I felt today?",
-            "If I had one thing I could do over today, what would it be?",
-            "What are three things you are grateful for today and why?",
-            "What is one accomplishment you are proud of from today and why?",
-            "Describe a moment from today that brought you joy or made you smile.",
-            "What are some things you are looking forward to in the upcoming days or weeks?",
-            "Write about a goal you have for yourself and the steps you can take to achieve it.",
-            "Describe your current mood and what may have contributed to it."
-        );
+        PromptGenerator promptGenerator = GeneratePrompt();
 
         // Instantiate a new Journal object.
         Journal myJournal = new Journal();
@@ -88,5 +74,24 @@ class Program
         Console.WriteLine("3. Load");
         Console.WriteLine("4. Save");
         Console.WriteLine("5. Quit");
+    }
+
+    static PromptGenerator GeneratePrompt() 
+    {
+        PromptGenerator promptGenerator = new PromptGenerator();
+        promptGenerator.AddPrompts(
+            "Who was the most interesting person I interacted with today?",
+            "What was the best part of my day?",
+            "How did I see the hand of the Lord in my life today?",
+            "What was the strongest emotion I felt today?",
+            "If I had one thing I could do over today, what would it be?",
+            "What are three things you are grateful for today and why?",
+            "What is one accomplishment you are proud of from today and why?",
+            "Describe a moment from today that brought you joy or made you smile.",
+            "What are some things you are looking forward to in the upcoming days or weeks?",
+            "Write about a goal you have for yourself and the steps you can take to achieve it.",
+            "Describe your current mood and what may have contributed to it."
+        );
+        return promptGenerator;
     }
 }
