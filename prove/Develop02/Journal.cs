@@ -50,6 +50,8 @@ public class Journal
             newEntry._prompt = lineParts[1];
             // Part 3 is entry answer.
             newEntry._answer = lineParts[2];
+            // Part 4 is the entry inspirational quote.
+            newEntry._inspirationalQuote = lineParts[3];
 
             // Add entry into the _entries list.
             _entries.Add(newEntry);
@@ -75,8 +77,9 @@ public class Journal
                     string date = entry._date;
                     string prompt = entry._prompt;
                     string answer = entry._answer;
+                    string inspirationalQuote = entry._inspirationalQuote;
 
-                    filePath.WriteLine($"{date}-|-{prompt}-|-{answer}");
+                    filePath.WriteLine($"{date}-|-{prompt}-|-{answer}-|-{inspirationalQuote}");
                 }
             }
             else
