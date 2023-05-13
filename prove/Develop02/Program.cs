@@ -5,6 +5,14 @@ class Program
 {
     static void Main(string[] args)
     {
+        /*
+        For the creativity portion of the project I decided to prompt the user
+        for an additional piece of information. I thought it would be amazing
+        if after responding to each prompt, the user could type in an inspirational
+        quote of their choosing that fits the day they happened to write the entry.
+        That way they have an entire file full of inspirational quotes for each entry
+        that they write.
+        */
         Console.WriteLine("Welcome to the Journal Program!");
 
         // Instantiate a PromptGenerator object and store it in promptGenerator.
