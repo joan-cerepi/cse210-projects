@@ -10,8 +10,8 @@ class Program
         for an additional piece of information. I thought it would be amazing
         if after responding to each prompt, the user could type in an inspirational
         quote of their choosing that fits the day they happened to write the entry.
-        That way they have an entire file full of inspirational quotes for each entry
-        that they write.
+        That way, as the journal grows they end up with an entire file full of inspirational quotes, 
+        one for each entry that they write.
         */
         Console.WriteLine("Welcome to the Journal Program!");
 
