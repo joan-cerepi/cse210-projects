@@ -11,18 +11,18 @@ class Program
         randomScripture.UpdateText();
         randomScripture.Display();
 
-        ConsoleKey key;
-        do
+        string userInput = Console.ReadLine().ToLower().Trim();
+        while (userInput != "quit" && !randomScripture.IsFullyHidden())
         {
-            key = Console.ReadKey(true).Key;
-
             Console.Clear();
             Console.WriteLine("Scripture Memorizer!");
             Console.WriteLine();
             randomScripture.HideWords();
             randomScripture.UpdateText();
             randomScripture.Display();
-        } while (key == ConsoleKey.Enter && !randomScripture.IsFullyHidden());
+
+            userInput = Console.ReadLine().ToLower().Trim();
+        }
     }
 
     static Scripture GetRandomScripture()
