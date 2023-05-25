@@ -8,7 +8,6 @@ class Program
         Console.WriteLine("Scripture Memorizer!");
         Console.WriteLine();
         Scripture randomScripture = GetRandomScripture();
-        randomScripture.UpdateText();
         randomScripture.Display();
 
         string userInput = Console.ReadLine().ToLower().Trim();

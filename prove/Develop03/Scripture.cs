@@ -12,7 +12,7 @@ public class Scripture
     {
         _reference = reference;
         _text = text;
-        _updatedText = "";
+        _updatedText = text;
         AddWords();
     }
 
