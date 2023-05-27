@@ -31,7 +31,7 @@ class Program
     {
         /*
             For the creativity part I decided to make my program work with a list of scriptures.
-            Then, it picks one at random and displays it to the user for them to try to memorize
+            It picks one at random and displays it to the user for them to try to memorize
             it.
         */
         List<Scripture> scriptures = new List<Scripture>();
