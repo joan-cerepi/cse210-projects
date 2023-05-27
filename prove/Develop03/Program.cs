@@ -9,6 +9,8 @@ class Program
         Console.WriteLine();
         Scripture randomScripture = GetRandomScripture();
         randomScripture.Display();
+        Console.WriteLine();
+        Console.WriteLine("Press <enter> to hide words or type 'quit' to end the program...");
 
         string userInput = Console.ReadLine().ToLower().Trim();
         while (userInput != "quit" && !randomScripture.IsFullyHidden())
@@ -19,13 +21,19 @@ class Program
             randomScripture.HideWords();
             randomScripture.UpdateText();
             randomScripture.Display();
-
+            Console.WriteLine();
+            Console.WriteLine("Press <enter> to hide words or type 'quit' to end the program...");
             userInput = Console.ReadLine().ToLower().Trim();
         }
     }
 
     static Scripture GetRandomScripture()
     {
+        /*
+            For the creativity part I decided to make my program work with a list of scriptures.
+            Then, it picks one at random and displays it to the user for them to try to memorize
+            it.
+        */
         List<Scripture> scriptures = new List<Scripture>();
         Random randomGenerator = new Random();
 
