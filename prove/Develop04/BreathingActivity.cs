@@ -24,25 +24,14 @@ public class BreathingActivity : Activity
         while (currentTime < futureTime)
         {
             Console.WriteLine();
-            for (int i = 4; i > 0; i--)
-            {
-                Console.Write($"{_message1}{i}");
-                string whiteOut = new string('\b', _message1.Length + 2);
-                Console.Write(whiteOut);
-                Thread.Sleep(1000);
-                currentTime = DateTime.Now;
-            }
-            Console.WriteLine($"{_message1}  ");
-
-            for (int i = 6; i > 0; i--)
-            {
-                Console.Write($"{_message2}{i}");
-                string whiteOut = new string('\b', _message2.Length + 2);
-                Console.Write(whiteOut);
-                Thread.Sleep(1000);
-                currentTime = DateTime.Now;
-            }
-            Console.WriteLine($"{_message2}  ");
+            Console.Write(_message1);
+            base.Countdown(4);
+            Console.WriteLine();
+            
+            Console.Write(_message2);
+            base.Countdown(6);
+            Console.WriteLine();
+            currentTime = DateTime.Now;
         }
         SetEndingMessage();
         string endingMessage = base.GetEndingMessage();
