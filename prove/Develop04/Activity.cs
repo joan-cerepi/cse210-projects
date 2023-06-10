@@ -23,9 +23,9 @@ public class Activity
         return _description;
     }
 
-    public void SetEndingMessage()
+    private void SetEndingMessage()
     {
-        _endingMessage = $"\nWell done!!\n\nYou have completed {_duration} seconds of the {_name}.";
+        _endingMessage = $"You have completed {_duration} seconds of the {_name}.";
     }
 
     public string GetEndingMessage()
@@ -55,6 +55,18 @@ public class Activity
         Console.WriteLine($"Welcome to the {_name}.");
         Console.WriteLine();
         Console.WriteLine(_description);
+    }
+
+    public void DisplayEndingMessage(int spinner1, int spinner2)
+    {
+        Console.WriteLine();
+        SetEndingMessage();
+        Console.WriteLine("Well done!!");
+        StartSpinner(spinner1);
+        Console.WriteLine();
+        Console.WriteLine(_endingMessage);
+        StartSpinner(spinner2);
+        Console.Clear();
     }
 
     public void StartSpinner(int timeInSeconds)

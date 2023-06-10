@@ -53,12 +53,6 @@ public class ListingActivity : Activity
             itemCounter++;
             startTime = DateTime.Now;
         }
-        SetEndingMessage();
-        Console.WriteLine($"You listed {itemCounter} items!");
-        Console.WriteLine();
-        string endingMessage = base.GetEndingMessage();
-        Console.WriteLine(endingMessage);
-        StartSpinner(6);
-        Console.Clear();
+        base.DisplayEndingMessage(3, 7);
     }
 }

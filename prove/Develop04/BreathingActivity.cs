@@ -33,10 +33,6 @@ public class BreathingActivity : Activity
             Console.WriteLine();
             currentTime = DateTime.Now;
         }
-        SetEndingMessage();
-        string endingMessage = base.GetEndingMessage();
-        Console.WriteLine(endingMessage);
-        StartSpinner(7);
-        Console.Clear();
+        base.DisplayEndingMessage(3, 7);
     }
 }

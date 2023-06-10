@@ -69,10 +69,6 @@ public class ReflectionActivity : Activity
             indices.Add(randomIndex);
             startTime = DateTime.Now;
         }
-        SetEndingMessage();
-        string endingMessage = base.GetEndingMessage();
-        Console.WriteLine(endingMessage);
-        StartSpinner(6);
-        Console.Clear();
+        base.DisplayEndingMessage(3, 7);
     }
 }
