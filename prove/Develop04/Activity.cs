@@ -3,7 +3,7 @@ using System;
 public class Activity
 {
     private string _name;
-    private string _startingMessage;
+    private string _description;
     private string _endingMessage;
     private int _duration;
     private string _startingPrompt = "How long, in seconds, would you like for your session? ";
@@ -13,14 +13,14 @@ public class Activity
         _name = name;
     }
 
-    public void SetStartingMessage(string message)
+    public void SetDescription(string message)
     {
-        _startingMessage = message;
+        _description = message;
     }
 
     public string GetStartingMessage()
     {
-        return _startingMessage;
+        return _description;
     }
 
     public void SetEndingMessage()
@@ -54,7 +54,7 @@ public class Activity
         Console.Clear();
         Console.WriteLine($"Welcome to the {_name}.");
         Console.WriteLine();
-        Console.WriteLine(_startingMessage);
+        Console.WriteLine(_description);
     }
 
     public void StartSpinner(int timeInSeconds)
