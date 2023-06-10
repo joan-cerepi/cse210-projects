@@ -1,4 +1,14 @@
 using System;
+/*
+    -- Creativity --
+    In the listing activity, I wrote code that will store the randomly selected prompt, plus all the
+    user answers in a file in the current program folder.
+    I also wrote code for the reflection activity that will make a decision for the random prompts
+    based on previously selected prompts, so that the user will not be given the same prompt more than once.
+    Also, if the program runs out of prompts, it will break out of the loop and move on with the rest
+    of the code.
+*/
+
 
 class Program
 {
