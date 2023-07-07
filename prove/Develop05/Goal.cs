@@ -4,7 +4,7 @@ public abstract class Goal
 {
     private string _name = "";
     private string _shortDescription = "";
-    protected bool _isComplete;
+    protected bool _isComplete = false;
     protected int _pointsWorth;
     protected int _pointsEarned = 0;
 
@@ -28,11 +28,17 @@ public abstract class Goal
         return _shortDescription;
     }
 
-    public abstract void Complete();
+    public abstract string GetGoal();
 
-    public string GetGoal()
+    public int GetPointsWorth()
     {
-        string checkMark = _isComplete ? "[X]" : "[ ]";
-        return $"{checkMark} {_name} ({_shortDescription})";
+        return _pointsWorth;
     }
+
+    public bool IsComplete()
+    {
+        return _isComplete;
+    }
+
+    public abstract void Complete();
 }

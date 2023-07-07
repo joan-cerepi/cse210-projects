@@ -1,8 +1,8 @@
 using System;
 
-public class SimpleGoal : Goal
+public class EternalGoal : Goal
 {
-    public SimpleGoal() : base()
+    public EternalGoal() : base()
     {
 
     }
@@ -15,7 +15,6 @@ public class SimpleGoal : Goal
 
     public override void Complete()
     {
-        _isComplete = true;
-        _pointsEarned = _pointsWorth;
+        _pointsEarned += _pointsWorth;
     }
 }
