@@ -160,20 +160,27 @@ class Program
 
     static void Record()
     {
-        Console.WriteLine("The goals are:");
-        int counter = 0;
-        foreach (Goal goal in _goals)
+        if (_goals.Count > 0)
         {
-            counter++;
-            Console.WriteLine($"{counter}. {goal.GetName()}");
+            Console.WriteLine("The goals are:");
+            int counter = 0;
+            foreach (Goal goal in _goals)
+            {
+                counter++;
+                Console.WriteLine($"{counter}. {goal.GetName()}");
+            }
+            Console.Write("Which goal did you accomplish? ");
+            int choice = int.Parse(Console.ReadLine());
+            Goal completedGoal = _goals[choice - 1];
+            completedGoal.RecordEvent();
+            int pointsWorth = completedGoal.GetPointsWorth();
+            _pointsTotal += pointsWorth;
+            Console.WriteLine($"Congratulations! You have earned {pointsWorth} points.");
+            Console.WriteLine($"You now have {_pointsTotal} points.");
         }
-        Console.Write("Which goal did you accomplish? ");
-        int choice = int.Parse(Console.ReadLine());
-        Goal completedGoal = _goals[choice - 1];
-        completedGoal.RecordEvent();
-        int pointsWorth = completedGoal.GetPointsWorth();
-        _pointsTotal += pointsWorth;
-        Console.WriteLine($"Congratulations! You have earned {pointsWorth} points.");
-        Console.WriteLine($"You now have {_pointsTotal} points.");
+        else
+        {
+            Console.WriteLine("There are no goals in the list.");
+        }
     }
 }
