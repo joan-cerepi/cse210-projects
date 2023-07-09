@@ -8,6 +8,18 @@ public abstract class Goal
     protected string _goalType;
     protected int _pointsWorth;
     protected int _pointsEarned = 0;
+    protected string[] _inspirationalQuotes = {
+        "\"Success is not the key to happiness. Happiness is the key to success. If you love what you are doing, you will be successful.\" - Albert Schweitzer",
+        "\"The future belongs to those who believe in the beauty of their dreams.\" - Eleanor Roosevelt",
+        "\"The only way to do great work is to love what you do.\" - Steve Jobs",
+        "\"You are never too old to set another goal or to dream a new dream.\" - C.S. Lewis",
+        "\"Believe you can and you're halfway there.\" - Theodore Roosevelt",
+        "\"Success is not final, failure is not fatal: It is the courage to continue that counts.\" - Winston Churchill",
+        "\"The only limit to our realization of tomorrow will be our doubts of today.\" - Franklin D. Roosevelt",
+        "\"Don't watch the clock; do what it does. Keep going.\" - Sam Levenson",
+        "\"Your time is limited, don't waste it living someone else's life.\" - Steve Jobs",
+        "\"You have within you right now, everything you need to deal with whatever the world can throw at you.\" - Brian Tracy"
+    };
 
     public Goal()
     {
@@ -78,9 +90,18 @@ public abstract class Goal
         _goalType = goalType;
     }
 
-    public void SetIsComplete(bool isComplete)
+    public void SetStatus(bool isComplete)
     {
         _isComplete = isComplete;
+    }
+
+    public void DisplayInspirationalQuote()
+    {
+        Random randomGenerator = new Random();
+        int randomIndex = randomGenerator.Next(0, _inspirationalQuotes.Length);
+        Console.WriteLine();
+        Console.WriteLine(_inspirationalQuotes[randomIndex]);
+        Console.WriteLine();
     }
 
     public abstract string GetGoal();

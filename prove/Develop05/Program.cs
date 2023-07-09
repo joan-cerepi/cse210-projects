@@ -5,6 +5,7 @@ class Program
 {
     private static List<Goal> _goals = new List<Goal>();
     private static int _pointsTotal = 0;
+
     static void Main(string[] args)
     {
         bool isRunning = true;
@@ -177,6 +178,7 @@ class Program
             _pointsTotal += pointsWorth;
             Console.WriteLine($"Congratulations! You have earned {pointsWorth} points.");
             Console.WriteLine($"You now have {_pointsTotal} points.");
+            completedGoal.DisplayInspirationalQuote();
         }
         else
         {
