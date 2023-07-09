@@ -1,6 +1,11 @@
 using System;
 using System.Collections.Generic;
 
+/*
+    For the creativity part I wrote code that displays a random inspirational quote every time
+    you record an event and it gets checked off.
+*/
+
 class Program
 {
     private static List<Goal> _goals = new List<Goal>();
